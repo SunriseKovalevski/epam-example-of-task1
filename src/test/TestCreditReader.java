@@ -2,13 +2,13 @@ package test;
 
 import java.util.List;
 
-import domain.Credit;
 import model.reader.CreditReader;
-import model.reader.CreditReaderFakeImpl;
+import domain.Credit;
+import factory.FactoryHolder;
 
 public class TestCreditReader {
     public static void main(String[] args) {
-        CreditReader reader = new CreditReaderFakeImpl();
+        CreditReader reader = FactoryHolder.getFactory().createCreditReader();
         List<Credit> credits = reader.read();
         for(Credit credit : credits) {
             System.out.println(credit);

@@ -1,8 +1,9 @@
-package model.reader;
+package model.reader.fake;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import model.reader.CreditReader;
 import domain.Credit;
 
 public class CreditReaderFakeImpl implements CreditReader {
